@@ -12,8 +12,6 @@ public class DaoMain {
 		
 			
 		ConcatString concat=(ConcatString)ctx.getBean("concatString");
-		
-		System.out.println(concat.getClass().getName());
 		concat.joinString("Abhinay","Full Stack Developer");
 
 	}
