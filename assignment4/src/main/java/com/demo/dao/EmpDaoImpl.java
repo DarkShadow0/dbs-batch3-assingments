@@ -6,12 +6,14 @@ import javax.persistence.EntityManager;
 import javax.persistence.EntityTransaction;
 import javax.persistence.PersistenceContext;
 import javax.persistence.Query;
+import javax.transaction.Transactional;
 
 import org.springframework.stereotype.Service;
 
 import com.demo.jpa.entity.Emp;
 
 @Service
+@Transactional
 public class EmpDaoImpl implements EmpDao {
 
 	@PersistenceContext
@@ -19,11 +21,8 @@ public class EmpDaoImpl implements EmpDao {
 	
 	@Override
 	public String save(Emp e) {
-		EntityTransaction tran = em.getTransaction();
-		tran.begin();
 		em.persist(e);
-		tran.commit();
-		return null;
+		return "saved";
 	}
 
 	@Override

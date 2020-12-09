@@ -16,7 +16,7 @@ public class SpringJpaMain {
 		
 		EmpDao test=ctx.getBean(EmpDao.class);
 
-		//test.save(new Emp(200,"xyz","Pune",50000));
+		test.save(new Emp(200,"xyz","Pune",50000));
 		List<Emp> l= test.list();
 		l.forEach(e->System.out.println(e.getEmpId()+" "+e.getEmpName()+" "+e.getSalary()));
 		Emp emp = test.findById(200);
