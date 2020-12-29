@@ -1,0 +1,16 @@
+<br><br>
+<hr>
+<h2>Search Customer</h2>
+<div class="row">
+    <div class="col-sm-5">
+        <h4>Search Employee: <input type="text" name="id" #id></h4><br>
+        <button class="btn btn-primary" (click)="getEmp(id.value)">Search</button>
+    </div>
+    <div class="col-sm-6">
+        <div *ngIf="cust!=null && id!='' ">
+            <p><strong>Name:</strong>{{cust.customerName}}</p>
+            <p><strong>City:</strong>{{cust.address}}</p>
+            <p><strong>Email:</strong>{{cust.email}}</p>
+        </div>    
+    </div>
+</div>

@@ -1,0 +1,12 @@
+<br><br>
+<hr>
+<div class="container-fluid" *ngIf="cust">
+    <h2>{{cust.customerName}} Details</h2>
+    <hr>
+    <p><strong>Name: </strong>{{cust.customerName}}</p>
+    <p><strong>Id: </strong>{{cust.customerId}}</p>
+    <p><strong>City: </strong>{{cust.address}}</p>
+    <p><strong>Email: </strong>{{cust.email}}</p>
+    <p><strong>Mobile: </strong>{{cust.mobileNo}}</p>
+    <button class="btn btn-outline-success" (click)="goBack()">Go Back</button>
+</div>

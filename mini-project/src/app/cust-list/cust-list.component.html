@@ -1,0 +1,28 @@
+<br><br>
+<hr>
+<h2>Customer List</h2>
+<div class="container-fluid">
+    <div class="row">
+        <div class="col-sm-10">
+            <ngb-accordion>
+                <ngb-panel *ngFor="let cust of custList; let i=index">
+                    <ng-template ngbPanelTitle>
+                        <div class="row">
+                            <div class="col-sm-6">
+                                <h4>{{cust.customerId}}</h4>
+                            </div>
+                            <div class="col-sm-6">
+                                <button class="btn btn-outline-danger" (click) ="deleteCust(i)">Delete</button>
+                            </div>
+                        
+                        </div>
+                    </ng-template>
+                    <ng-template ngbPanelContent>
+                        <a routerLink="/details/{{cust.customerId}}">{{cust.customerName | titlecase}}</a>
+                    </ng-template>
+                </ngb-panel>
+            </ngb-accordion>
+        </div>
+    </div>
+</div>
+
